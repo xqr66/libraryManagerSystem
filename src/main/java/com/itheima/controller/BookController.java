@@ -41,6 +41,7 @@ public class BookController {
     //设置请求路径，并将请求路径参数传入方法中
     @GetMapping("{id}")
     public R getById(@PathVariable Integer id) {
+        System.out.println("query success!");
         return new R(true, bookService.getById(id));
     }
 
